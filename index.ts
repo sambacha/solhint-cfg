@@ -1,7 +1,7 @@
 const { showInvisibles, generateDifferences } = require('prettier-linter-helpers')
 const { INSERT, DELETE, REPLACE } = generateDifferences
 
-const getLocFromIndex = (text, index) => {
+const getLocFromIndex = (text: any, index: any) => {
   let line = 1
   let column = 0
   let i = 0
@@ -19,7 +19,13 @@ const getLocFromIndex = (text, index) => {
 }
 
 class PrettierChecker {
-  constructor(reporter, config, inputSrc, fileName) {
+  config: any;
+  fileName: any;
+  inputSrc: any;
+  prettier: any;
+  reporter: any;
+  ruleId: any;
+  constructor(reporter: any, config: any, inputSrc: any, fileName: any) {
     this.prettier = null
     this.ruleId = 'prettier'
     this.reporter = reporter
@@ -55,7 +61,7 @@ class PrettierChecker {
 
       const differences = generateDifferences(this.inputSrc, formatted)
 
-      differences.forEach(difference => {
+      differences.forEach((difference: any) => {
         let loc = null
         switch (difference.operation) {
           case INSERT:
@@ -86,7 +92,7 @@ class PrettierChecker {
     }
   }
 
-  errorAt(line, column, message) {
+  errorAt(line: any, column: any, message: any) {
     this.reporter.errorAt(line, column, this.ruleId, message)
   }
 }
