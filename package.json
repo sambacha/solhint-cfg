@@ -1,0 +1,26 @@
+{
+  "name": "prettier-plugin-solhint",
+  "version": "0.0.6",
+  "description": "",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "index.ts"
+  ],
+  "keywords": [
+    "solhint",
+    "prettier",
+    "plugin",
+    "solidity"
+  ],
+  "author": "SEE CONTRIBUTORS",
+  "license": "MIT",
+  "dependencies": {
+    "@types/prettier-linter-helpers": "^1.0.0",
+    "prettier-linter-helpers": "^1.0.0"
+  },
+  "peerDependencies": {
+    "prettier": "^2.2.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.5"
+  }
+}
