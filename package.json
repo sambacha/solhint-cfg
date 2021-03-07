@@ -12,7 +12,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "prettier-linter-helpers": "^1.0.0"
+    "prettier-linter-helpers": "^1.0.0",
+    "ts-migrate": "^0.1.15"
   },
   "peerDependencies": {
     "prettier": "^1.15.0 || ^2.0.0",
